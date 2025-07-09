@@ -1,0 +1,172 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.quiz-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+h1 {
+    color: #4CAF50;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#question-area {
+    margin-bottom: 30px;
+}
+
+#question-text {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: #555;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa các lựa chọn */
+    margin-bottom: 20px;
+}
+
+.option-button {
+    background-color: #e8f5e9; /* Light green */
+    color: #333;
+    border: 1px solid #c8e6c9;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    text-align: left; /* Căn trái văn bản trong nút */
+}
+
+.option-button:hover {
+    background-color: #dcedc8; /* Darker light green on hover */
+    border-color: #a5d6a7;
+    transform: translateY(-2px);
+}
+
+.option-button.correct {
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border-color: #388E3C;
+}
+
+.option-button.incorrect {
+    background-color: #EF5350; /* Slightly darker red for better contrast */
+    color: white; /* Changed text color to white for better contrast */
+    border-color: #D32F2F;
+}
+
+#feedback-text {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 1.1em;
+    padding: 10px;
+    border-radius: 8px;
+    display: none; /* Ban đầu ẩn */
+}
+
+#feedback-text.correct {
+    color: #ffffff; /* Giữ màu chữ trắng hoặc đổi sang đen tùy độ sáng nền */
+    background-color: #87CEEB; /* Màu xanh da trời */
+    border: 1px solid #6A5ACD; /* Màu border đậm hơn chút */
+}
+
+#feedback-text.incorrect {
+    color: #ffffff; /* Giữ màu chữ trắng hoặc đổi sang đen tùy độ sáng nền */
+    background-color: #87CEEB; /* Màu xanh da trời */
+    border: 1px solid #6A5ACD; /* Màu border đậm hơn chút */
+}
+
+
+
+#result-area {
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#result-area p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#result-area p strong {
+    color: #4CAF50;
+    font-size: 1.3em;
+}
+
+#feedback-text-overall { /* CSS cho phần feedback tổng kết ở trang kết quả */
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #e0f7fa; /* Light blue background */
+    border: 1px solid #b2ebf2;
+    color: #006064;
+}
+
+#reflection-area {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: #fffde7; /* Light yellow background */
+    border: 1px solid #ffe082;
+    border-radius: 8px;
+    text-align: left;
+}
+
+#reflection-area h3 {
+    color: #ffb300;
+    margin-bottom: 15px;
+    font-size: 1.5em;
+}
+
+#reflection-area p {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+#restart-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+#restart-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-3px);
+}
+
+#restart-button:active {
+    transform: translateY(0);
+}
