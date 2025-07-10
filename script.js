@@ -196,14 +196,14 @@ const questions = [
         }
     },
     {
-        question: 'Bao lâu rồi bạn chưa chụp hình chung và up lên mạng xã hội?',
+        question: 'Bao lâu rồi bạn chưa chụp hình chung và up lên mạng xã hội, Điều đó có ảnh hưởng gì không?',
         options: [
-            'Đó là điều bình thường trước như kia',
+            'Tôi thấy bình thường',
 	    'Không quan trọng, không ảnh hưởng gì.',
-            'Điều đó tốt, Luôn mang lại sự mới mẻ cho mối quan hệ, tránh nhàm chán.',
+            'Đó là điều tốt, mang sự ấm áp, hạnh phúc cho cả 2.',
             'Không thực sự cần thiết.'
         ],
-        correctAnswer: 'Điều đó tốt, Luôn mang lại sự mới mẻ cho mối quan hệ, tránh nhàm chán.',
+        correctAnswer: 'Đó là điều tốt, mang sự ấm áp, hạnh phúc cho cả 2.',
         feedback: {
             correct: 'Chính xác! Nó giúp cho tình cảm vợ chồng đi lên, từ đó mang lại những điều thú vị và mới mẻ cho mối quan hệ.',
             incorrect: 'Chưa đúng. Bạn không thể xem thường điều đó, rất dễ làm rạn nứt tình cảm.'
