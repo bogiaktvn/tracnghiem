@@ -1,0 +1,212 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f0f2f5;
+    color: #333;
+    line-height: 1.6;
+    /* Hình nền tình yêu */
+    /* Hãy thay 'love_background.jpg' bằng tên tệp hình ảnh của bạn */
+    background-image: url('love_background.jpg'); 
+    background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ nền */
+    background-position: center; /* Căn giữa hình ảnh */
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+    background-attachment: fixed; /* Giữ hình ảnh cố định khi cuộn */
+}
+
+/* Kiểu cho màn hình giới thiệu */
+.intro-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro-container h1 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.intro-container p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Keyframe cho hiệu ứng mờ dần */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Kiểu cho quiz container */
+.quiz-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 700px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+h1 {
+    color: #4CAF50;
+    margin-bottom: 25px;
+    font-size: 2em;
+    font-weight: 600;
+}
+
+#question-area {
+    margin-bottom: 30px;
+}
+
+#question-text {
+    font-size: 1.3em;
+    margin-bottom: 25px;
+    font-weight: 500;
+    color: #555;
+}
+
+#options-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Khoảng cách giữa các nút */
+}
+
+.option-button {
+    background-color: #e9e9e9;
+    color: #333;
+    border: 1px solid #dcdcdc;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease, transform 0.2s ease;
+    text-align: left; /* Căn trái văn bản trong nút */
+}
+
+.option-button:hover:not(:disabled) {
+    background-color: #dcdcdc;
+    border-color: #c0c0c0;
+    transform: translateY(-2px);
+}
+
+.option-button.correct {
+    background-color: #d4edda; /* Light green */
+    border-color: #28a745; /* Darker green */
+    color: #155724; /* Darkest green */
+    font-weight: bold;
+}
+
+.option-button.incorrect {
+    background-color: #f8d7da; /* Light red */
+    border-color: #dc3545; /* Darker red */
+    color: #721c24; /* Darkest red */
+    font-weight: bold;
+}
+
+.option-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+#feedback-text {
+    margin-top: 20px;
+    font-size: 1.1em;
+    font-weight: 500;
+    min-height: 40px; /* Đảm bảo đủ không gian */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.feedback-correct {
+    color: #28a745; /* Green */
+    background-color: #d4edda;
+    border: 1px solid #28a745;
+}
+
+.feedback-incorrect {
+    color: #dc3545; /* Red */
+    background-color: #f8d7da;
+    border: 1px solid #dc3545;
+}
+
+
+#result-area {
+    padding: 20px;
+    border: 1px solid #dcdcdc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+#result-area p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: #555;
+}
+
+#result-area p strong {
+    color: #4CAF50;
+    font-size: 1.3em;
+}
+
+#feedback-text-overall { /* CSS cho phần feedback tổng kết ở trang kết quả */
+    margin-top: 20px;
+    font-style: italic;
+    font-size: 1.1em;
+    text-align: center;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: #e0f7fa; /* Light blue background */
+    border: 1px solid #b2ebf2;
+    color: #006064;
+}
+
+#restart-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 8px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 20px;
+}
+
+#restart-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
