@@ -196,17 +196,17 @@ const questions = [
         }
     },
     {
-        question: 'Việc vợ chồng có những sở thích hoặc không gian riêng biệt là tốt hay xấu cho hôn nhân?',
+        question: 'Bao lâu rồi bạn chưa chụp hình chung và up lên mạng xã hội?',
         options: [
-            'Xấu, vì vợ chồng phải làm mọi thứ cùng nhau.',
-			'Không quan trọng, không ảnh hưởng gì.',
-            'Tốt, giúp mỗi người phát triển bản thân và mang lại sự mới mẻ cho mối quan hệ, tránh nhàm chán.',
-            'Chỉ tốt khi hai người không còn yêu nhau nữa.'
+            'Đó là điều bình thường trước như kia',
+	    'Không quan trọng, không ảnh hưởng gì.',
+            'Điều đó tốt, Luôn mang lại sự mới mẻ cho mối quan hệ, tránh nhàm chán.',
+            'Không thực sự cần thiết.'
         ],
-        correctAnswer: 'Tốt, giúp mỗi người phát triển bản thân và mang lại sự mới mẻ cho mối quan hệ, tránh nhàm chán.',
+        correctAnswer: 'Điều đó tốt, Luôn mang lại sự mới mẻ cho mối quan hệ, tránh nhàm chán.',
         feedback: {
-            correct: 'Chính xác! Sự độc lập lành mạnh giúp mỗi người có không gian riêng để phát triển, từ đó mang lại những điều thú vị và mới mẻ cho mối quan hệ.',
-            incorrect: 'Chưa đúng. Có những sở thích và không gian riêng lành mạnh thực sự có thể làm phong phú thêm mối quan hệ, giúp mỗi người phát triển và duy trì sự hấp dẫn.'
+            correct: 'Chính xác! Nó giúp cho tình cảm vợ chồng đi lên, từ đó mang lại những điều thú vị và mới mẻ cho mối quan hệ.',
+            incorrect: 'Chưa đúng. Bạn không thể xem thường điều đó, rất dễ làm rạn nứt tình cảm.'
         }
     },
     {
