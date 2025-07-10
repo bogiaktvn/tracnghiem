@@ -8,8 +8,64 @@ body {
     background-color: #f0f2f5;
     color: #333;
     line-height: 1.6;
+    /* Hình nền tình yêu */
+    /* Hãy thay 'love_background.jpg' bằng tên tệp hình ảnh của bạn */
+    background-image: url('love_background.jpg'); 
+    background-size: cover; /* Đảm bảo hình ảnh bao phủ toàn bộ nền */
+    background-position: center; /* Căn giữa hình ảnh */
+    background-repeat: no-repeat; /* Không lặp lại hình ảnh */
+    background-attachment: fixed; /* Giữ hình ảnh cố định khi cuộn */
 }
 
+/* Kiểu cho màn hình giới thiệu */
+.intro-container {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    width: 90%;
+    max-width: 600px;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.intro-container h1 {
+    color: #4CAF50;
+    margin-bottom: 20px;
+    font-size: 2.5em;
+    font-weight: 700;
+}
+
+.intro-container p {
+    font-size: 1.2em;
+    color: #555;
+    margin-bottom: 30px;
+}
+
+.start-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    border-radius: 8px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.start-button:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+/* Keyframe cho hiệu ứng mờ dần */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Kiểu cho quiz container */
 .quiz-container {
     background-color: #ffffff;
     padding: 30px;
@@ -42,14 +98,13 @@ h1 {
 #options-container {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Khoảng cách giữa các lựa chọn */
-    margin-bottom: 20px;
+    gap: 15px; /* Khoảng cách giữa các nút */
 }
 
 .option-button {
-    background-color: #e8f5e9; /* Light green */
+    background-color: #e9e9e9;
     color: #333;
-    border: 1px solid #c8e6c9;
+    border: 1px solid #dcdcdc;
     padding: 12px 20px;
     border-radius: 8px;
     font-size: 1.1em;
@@ -58,45 +113,55 @@ h1 {
     text-align: left; /* Căn trái văn bản trong nút */
 }
 
-.option-button:hover {
-    background-color: #dcedc8; /* Darker light green on hover */
-    border-color: #a5d6a7;
+.option-button:hover:not(:disabled) {
+    background-color: #dcdcdc;
+    border-color: #c0c0c0;
     transform: translateY(-2px);
 }
 
 .option-button.correct {
-    background-color: #4CAF50; /* Green */
-    color: white;
-    border-color: #388E3C;
+    background-color: #d4edda; /* Light green */
+    border-color: #28a745; /* Darker green */
+    color: #155724; /* Darkest green */
+    font-weight: bold;
 }
 
 .option-button.incorrect {
-    background-color: #EF5350; /* Slightly darker red for better contrast */
-    color: white; /* Changed text color to white for better contrast */
-    border-color: #D32F2F;
+    background-color: #f8d7da; /* Light red */
+    border-color: #dc3545; /* Darker red */
+    color: #721c24; /* Darkest red */
+    font-weight: bold;
+}
+
+.option-button:disabled {
+    cursor: not-allowed;
+    opacity: 0.8;
 }
 
 #feedback-text {
     margin-top: 20px;
-    font-weight: bold;
     font-size: 1.1em;
+    font-weight: 500;
+    min-height: 40px; /* Đảm bảo đủ không gian */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
     padding: 10px;
     border-radius: 8px;
-    display: none; /* Ban đầu ẩn */
 }
 
-#feedback-text.correct {
-    color: #ffffff; /* Giữ màu chữ trắng hoặc đổi sang đen tùy độ sáng nền */
-    background-color: #87CEEB; /* Màu xanh da trời */
-    border: 1px solid #6A5ACD; /* Màu border đậm hơn chút */
+.feedback-correct {
+    color: #28a745; /* Green */
+    background-color: #d4edda;
+    border: 1px solid #28a745;
 }
 
-#feedback-text.incorrect {
-    color: #ffffff; /* Giữ màu chữ trắng hoặc đổi sang đen tùy độ sáng nền */
-    background-color: #87CEEB; /* Màu xanh da trời */
-    border: 1px solid #6A5ACD; /* Màu border đậm hơn chút */
+.feedback-incorrect {
+    color: #dc3545; /* Red */
+    background-color: #f8d7da;
+    border: 1px solid #dc3545;
 }
-
 
 
 #result-area {
@@ -129,27 +194,6 @@ h1 {
     color: #006064;
 }
 
-#reflection-area {
-    margin-top: 30px;
-    padding: 20px;
-    background-color: #fffde7; /* Light yellow background */
-    border: 1px solid #ffe082;
-    border-radius: 8px;
-    text-align: left;
-}
-
-#reflection-area h3 {
-    color: #ffb300;
-    margin-bottom: 15px;
-    font-size: 1.5em;
-}
-
-#reflection-area p {
-    font-size: 1em;
-    color: #555;
-    margin-bottom: 10px;
-}
-
 #restart-button {
     background-color: #007bff;
     color: white;
@@ -164,9 +208,5 @@ h1 {
 
 #restart-button:hover {
     background-color: #0056b3;
-    transform: translateY(-3px);
-}
-
-#restart-button:active {
-    transform: translateY(0);
+    transform: translateY(-2px);
 }
